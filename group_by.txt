@@ -3,7 +3,7 @@ SELECT COUNT(`id`) AS `n_iscritti`, YEAR(`enrolment_date`) AS `anno_iscrizione`
 FROM `students`
 GROUP BY `anno_iscrizione`;
 
-2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+-2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 SELECT COUNT(`id`) AS `n_insegnanti`, `office_address`
 FROM `teachers`
 WHERE `office_address` LIKE
@@ -15,3 +15,6 @@ FROM `exam_student`
 GROUP BY `exam_id` ;
 
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT COUNT(`id`) AS `n_corsi_di_laurea`, `department_id`
+FROM `degrees`
+GROUP BY `department_id`;
